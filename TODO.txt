@@ -1,0 +1,38 @@
+Mes projets en avant:
+- PLATEFORME PROCEDURAL !
+- Nouvelle structure ->
+	Capacitée (barre de complétion ?) -> Projet 1, Projet 2
+(pareil pour le menu à la place des types de créations ?)
+
+Vidéo présentation:
+- Mettre en avant les capacité liés aux projets avant tout
+- Mettre plus en avant le produit plutôt que le resultat (ex: le pad plus que le jeu)
+
+Menu:
+- Surbrillance de la page choisie
+
+
+PROJETS:
+
+	- Ajouter Transposition VR
+
+	Hologram VR Show:
+	- Mettre en avant des footage de la production pour illustrer le travail
+	
+	Controlleur Arcade:
+	- Vidéo mettant plus en avant le pad
+	- La vidéo debug à refaire avec footage du pad
+	
+	Circuit VR :
+	- à compléter
+
+	PPD to BeatSaber :
+	- à compléter
+
+	Prototype Hand Tracking :
+	- à compléter
+
+	Joys Rythm :
+	- vidéo format H264
+
+	

@@ -1,0 +1,85 @@
+<div class="w3-container w3-third" style="display: block">
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l2">HOLOGRAM VR SHOW <br>(2020 PC - 2022 QUEST)</h2>
+<p>Une application en réalité virtuelle qui permet de lire des fichiers vidéo
+sur une scène de concert holographique virtualisé. <br><br>
+En y diffusant des vidéos dites « Hologram Ready », l’application se charge de retirer la
+couleur de fond de la vidéo afin de la faire apparaitre sur la scène comme un
+hologramme.<br><br>
+On peut y ajouter des vidéos de fond, des vidéos sur le décor, et autres effets de mises
+en scène.</p><br />
+</div>
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l1"><a href="https://sidequestvr.com/app/5982/hologram-vr-show" target="_blank">Page Side Quest</a></h2>
+<h2 class="w3-theme-l1"><a href="https://www.youtube.com/watch?v=eaRNChswiAE" target="_blank">Release Youtube PC</a></h2>
+</div>
+</div>
+
+<div class="w3-container w3-twothird">
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l2">Images et Vidéos</h2>
+<div class="w3-content" style="max-width:980px">
+<div class="mySlides"><h3>VIDEO: Extrait de la version PC/Quest d'Hologram VR Show.</h3><br>
+	Le mode en AR est exclusif au Quest, mais les deux proposent une scène afin de vivre un concert Vocaloid à la maison.<br>
+	Il est possible d'ajouter des vidéos sur les écrans secondaires afin d'y créer une mise en scène.<video width="100%" height="100%" controls loop >
+	  <source src="files/videos/hologram VR PC.mp4" type="video/mp4">
+	Vidéo non supportée...
+	</video></div>
+  <div class="mySlides" style="display:none"><h3>VIDEO: Une chanson Vocaloid en VR + AR sur Oculus Quest 2.</h3><br>
+	L'application permet de créer des mises en scène synchronisées avec les caméras de l'Oculus Quest afin de créer des expériences visuelles variées et d'approcher une mise en scène de concert.<br>
+	Ici j'utilise Sadistic Music Factory (par Cosmo@P) afin de montrer à quel point l'on peut jouer avec la mise en scène de cette manière.<video width="100%" height="100%" controls loop>
+	  <source src="files/videos/hologram VR Quest.mp4" type="video/mp4">
+	Vidéo non supportée...
+	</video></div>
+  <div class="mySlides" style="display:none"><h3>Rendu d'un hologramme sur scène avec mise en scène de fond</h3><img class="w3-animate-left" src="images/VR/hologram1.png" style="width:100%"></div>
+  <div class="mySlides" style="display:none"><h3>Plusieurs positions possibles : depuis la fosse, la scène, en hauteur, etc...</h3><img class="w3-animate-left" src="images/VR/hologram2.png" style="width:100%"></div>
+  <div class="mySlides" style="display:none"><h3>Interface sur la partie AR qui permet de régler la couleur de la caméra</h3><img class="w3-animate-left" src="images/VR/hologram3.png" style="width:100%"></div>
+  <div class="mySlides" style="display:none"><h3>Rendu d'un hologramme en AR avec une mise en scène de la caméra</h3><img class="w3-animate-left" src="images/VR/hologram4.png" style="width:100%"></div>
+  
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/VR/video miku 2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
+    </div>
+    <div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/VR/video miku 1.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
+    </div>
+	<div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/VR/hologram1.png" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
+    </div>
+	<div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/VR/hologram2.png" style="width:100%;cursor:pointer" onclick="currentDiv(4)">
+    </div>
+	<div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/VR/hologram3.png" style="width:100%;cursor:pointer" onclick="currentDiv(5)">
+    </div>
+	<div class="w3-col s4">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/VR/hologram4.png" style="width:100%;cursor:pointer" onclick="currentDiv(6)">
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+<script>
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>

@@ -1,0 +1,50 @@
+<div class="w3-container w3-third" style="display: block">
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l2">Sonic Randomizer (2021)</h2>
+<p>Application Open Source permettant d’altérer les données <br>
+d’un fichier ROM de jeux SEGA MegaDrive, <br>
+afin d’y apporter de l’aléatoire dans le fonctionnement du jeu.<br><br>
+Se basant sur une base de données connut de jeux, <br>
+il détermine à quelle adresse se trouve chaque fonctionnalité à altérer, puis créer une nouvelle structure de données
+selon les réglages demandés par l’utilisateur.</p><br />
+</div>
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l1"><a href="https://github.com/oocyberkevinoo/Sonic-Randomizer" target="_blank">Repo GitHub</a></h2>
+</div>
+</div>
+<div class="w3-container w3-twothird">
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l2">Images</h2>
+
+<div class="w3-container">
+<img class="w3-animate-left" src="images/software/SonicRandomizer/sonicrandom1.png" style="width:100%">
+</div>
+<div class="w3-container">
+<img class="w3-animate-left" src="images/software/SonicRandomizer/software.jpg" style="width:100%">
+</div>
+
+</div>
+
+</div>
+
+<script>
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>

@@ -1,0 +1,120 @@
+body {
+	background-color: grey;
+	color: white;
+}
+
+div#page {
+	padding-left: 15px;
+}
+
+div#header {
+    text-align: center;
+    padding: 5px;
+    background: darkslategrey;
+}
+
+div#menu{
+	z-index: 5;
+}
+
+div#menu h4{
+ text-align: center;
+}
+div#menu h5{
+ padding-left: 5px;
+ margin: 0px;
+ margin-top: 25px;
+ font-style: italic;
+ /*color: lightgrey;*/
+}
+
+#footer {
+    text-align: center;
+    padding: 5px;
+    background: darkslategrey;
+	position: absolute;
+    width: -webkit-fill-available;
+    bottom: -30px;
+}
+
+div#background {
+    /* width: fit-content; */
+    position: fixed;
+    height: 100%;
+	mix-blend-mode: soft-light;
+    /*mix-blend-mode: color-dodge;*/
+    /* width: auto; */
+    display: flex;
+	z-index: -5;
+}
+
+.w3-sidenav a{
+    border-color: black;
+    border-width: thin;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+	border-bottom-style: solid;
+}
+.w3-opennav{
+	margin: 47%;
+}
+.w3-main{
+	position: relative;
+	min-height: 100vh;
+}
+.socialLinks{
+	display: flex;
+}
+.socialLinks a {
+    margin-top: 3px;
+    /* margin-left: -13px; */
+    width: -webkit-fill-available;
+    padding: initial;
+    text-align: center;
+}
+.socialLinks img{
+	height: 36px;
+	mix-blend-mode: difference;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+p
+{
+	margin: 6px;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+.circle-svg {
+  display: block;
+  margin: 10px auto;
+  max-height: 115px;
+}
+.circle-svg text.svg_text {
+  text-align:center;
+  font-size:8px;
+  font-weight:bolder;
+}
+.circle-svg text.svg_percent {
+  text-align:center;
+  font-size:6px;
+}
+.circle-svg path.percent {
+  stroke: #White;
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+.circle-svg path.around {
+    stroke: #c4c4c4;
+    fill: none;
+    stroke-width: 2.8;
+}
+.clickable a{
+	cursor: pointer;
+}

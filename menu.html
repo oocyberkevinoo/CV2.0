@@ -1,0 +1,74 @@
+<script src="scripts/menus.js"></script>
+<script>showMenu('games');showMenu('softwares');showMenu('vrar');showMenu('hardware');showLang()</script>
+<nav class="w3-sidenav w3-collapse w3-theme-d1 w3-card-2 w3-animate-left" style="width:200px">
+	<div id="menuFR">
+		<h4 class="w3-theme-d2">MENU</h4>
+		<a href="#" onclick="w3_close()" class="w3-closenav w3-hide-large" style="font-size: 150%; text-align: center; padding-bottom: 10%">Fermer &times;</a>
+		<a href="./">Accueil</a>
+		<a href="./?page=profile">CV / Profil</a>
+		<a href="./?page=about">Contacts / à propos...</a>
+		<div class="socialLinks">
+			<!--<a href="https://www.facebook.com/"><img src="images/icons/fb/f_logo_RGB-White_58.png"></img></a>-->
+			<a href="mailto:GarciaKevin-Pro@outlook.fr"><img src="images/icons/mail-64-00.png"></img></a>
+			<!--<a href="https://discordapp.com/users/215581203015663616"><img src="images/icons/discord.png"></img></a>-->
+			<a href="https://www.linkedin.com/in/kevin-garcia-8b4743130/"><img src="images/icons/linkedin.png"></img></a>
+			<a href="https://github.com/oocyberkevinoo/"><img src="images/icons/Git/GitHub-Mark-Light-64px.png"></img></a>
+		</div>
+		
+		<h5 class="w3-theme-d2">Portfolio</h5>
+		<div class="clickable"><a onClick="toggleMenu('softwares')" >Logiciels</a></div>
+		<div id="menu-FRsoftwares"></div>
+		<div class="clickable"><a onClick="toggleMenu('games')" >Jeux</a></div>
+		<div id="menu-FRgames"></div>
+		<div class="clickable"><a onClick="toggleMenu('vrar')" >VR/AR</a></div>
+		<div id="menu-FRvrar"></div>
+		<div class="clickable"><a onClick="toggleMenu('hardware')" >Matériel</a></div>
+		<div id="menu-FRhardware"></div>
+		
+		<h4></h4>
+		<h5 class="w3-theme-d2">Thèmes</h5>
+		<a onclick="updateTheme('Dark')" href="#">Sombre</a>
+		<a onclick="updateTheme('Light')" href="#">Lumineux</a>
+		<a onclick="updateTheme('Blue')" href="#">Bleu</a>
+		
+		<h5 class="w3-theme-d2">Langage</h5>
+		<a onClick="updateLang('FR')" href="#">Français</a>
+		<!--<a onClick="updateLang('EN')" href="#">Anglais</a>-->
+		
+		<!--<h5 class="w3-theme-d2">DEBUG</h5>
+		<a href="./?page=debug_videos">Videos</a>-->
+	</div>
+	<div id="menuEN">
+		<h4 class="w3-theme-d2">MENU</h4>
+		<a href="#" onclick="w3_close()" class="w3-closenav w3-hide-large" style="font-size: 150%; text-align: center; padding-bottom: 10%">Close &times;</a>
+		<a href="./">Home</a>
+		<a href="./?page=profile">CV / Profile</a>
+		<a href="./?page=about">Contacts / About...</a>
+		<div class="socialLinks">
+			<!--<a href="https://www.facebook.com/"><img src="images/icons/fb/f_logo_RGB-White_58.png"></img></a>-->
+			<a href="mailto:GarciaKevin-Pro@outlook.fr"><img src="images/icons/mail-64-00.png"></img></a>
+			<!--<a href="https://discordapp.com/users/215581203015663616"><img src="images/icons/discord.png"></img></a>-->
+			<a href="https://www.linkedin.com/in/kevin-garcia-8b4743130/"><img src="images/icons/linkedin.png"></img></a>
+			<a href="https://github.com/oocyberkevinoo/"><img src="images/icons/Git/GitHub-Mark-Light-64px.png"></img></a>
+		</div>
+		
+		<h5 class="w3-theme-d2">Portfolio</h5>
+		<a onClick="toggleMenu('softwares')" href="#">Softwares</a>
+		<div id="menu-ENsoftwares"></div>
+		<a onClick="toggleMenu('games')" href="#">Games</a>
+		<div id="menu-ENgames"></div>
+		<a onClick="toggleMenu('vrar')" href="#">VR/AR</a>
+		<div id="menu-ENvrar"></div>
+		<a onClick="toggleMenu('hardware')" href="#">Hardware</a>
+		<div id="menu-ENhardware"></div>
+
+		<h5 class="w3-theme-d2">Themes</h5>
+		<a onclick="updateTheme('Dark')" href="#">Dark</a>
+		<a onclick="updateTheme('Light')" href="#">Light</a>
+		<a onclick="updateTheme('Blue')" href="#">Blue</a>
+		
+		<h5 class="w3-theme-d2">Language</h5>
+		<a onClick="updateLang('FR')" href="#">French</a>
+		<a onClick="updateLang('EN')" href="#">English</a>
+	</div>
+</nav>
