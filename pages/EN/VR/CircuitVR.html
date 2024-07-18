@@ -1,0 +1,61 @@
+<h2 class="w3-theme-l4"  style="text-align: center">CETTE PAGE EST EN CONSTRUCTION.</h2>
+<div class="w3-container w3-third" style="display: block">
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l2">Circuit VR (2021) - Oculus Quest</h2>
+<p>Projet de jeu en réalité virtuel multijoueur utilisant un casque VR.<br><br>
+Le joueur portant le casque VR doit dessiner un circuit.<br>
+Le 2e joueur devra compléter à l’aveugle le circuit, sans en dévier et uniquement via les indications
+du joueur portant le casque.<br><br>
+Chaque sortie de circuit provoquera une vibration intense de la manette pour
+prévenir le joueur de se remettre en place, et le score diminuera au fil du temps
+que le joueur restera hors zone.<br><br>
+Le jeu n’est pas encore disponible publiquement par manque de finition,
+mais sa partie jeu est fonctionnelle</p><br /><br>
+  L'application est compatible Réalité Augmentée pour créer des circuits dans votre propre environement.
+</div>
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l1">Projet non publié à ce jour...</h2>
+</div>
+</div>
+
+<div class="w3-container w3-twothird">
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l2">Images</h2>
+
+<div class="w3-container w3-twothird">
+<h3><br><br>Le mode Editeur permet au joueur au casque <br>de créer le circuit pour le joueur sans casque.</h3>
+</div>
+<div class="w3-container w3-third">
+<img class="w3-animate-left" src="images/VR/circuitVR-1.png" style="width:100%">
+</div>
+<div class="w3-container w3-twothird" style="text-align:center">
+<h3><br><br>Le joueur sans casque prend la manette, <br>et doit compléter le circuit sans pouvoir le voir.</h3>
+</div>
+<div class="w3-container w3-third">
+<img class="w3-animate-left" src="images/VR/circuitVR-2.png" style="width:100%">
+</div>
+</div>
+
+</div>
+
+<script>
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
