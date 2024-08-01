@@ -1,0 +1,70 @@
+<div class="w3-container w3-third" style="display: block">
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l2">Le WEB</h2>
+<p>Texte sur mon niveau en technos WEB (Javascript, PHP, MySQL, Symfony, Outils WEB)</p><br />
+</div>
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l2">Les projets WEB</h2>
+<p>Liste des projets WEB, avec liens vers leur pages respectifs.<br>
+<li>Sonic Snake (Projet en une heure durant formation AFPA)</li>
+<li>Gestion de formations (Outil interne Propulse)</li>
+<li>Gestion de réservations de véhicules (Outil interne Propulse)</li>
+<li>Site de l'association VocaloDoga (Symfony, Site non-publié)</li>
+<li>Serveurs WEB FanGame AOI (API entre le jeu et la base de données)</li>
+</p></div>
+</div>
+
+<div class="w3-container w3-twothird">
+  
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+  <h2 class="w3-theme-l2">PHP / MySQL</h2>
+  <div class="w3-content" style="max-width:980px">
+    <p>De quoi montrer mon expérience avec le langage PHP et MySQL<br>
+    Montrer des éxemples complèxes, des traveaux uniques, de la manipulation de données avancée.</p>
+  </div>
+</div>
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+  <h2 class="w3-theme-l2">Programmation orientée objet</h2>
+  <div class="w3-content" style="max-width:980px">
+    <p>Informations sur ma manière de programmer en POO.<br>
+    L'élabrotation de classes, l'utilisation dans un projet, les cas les plus pertinants.</p>
+  </div>
+</div>
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+  <h2 class="w3-theme-l2">Mes Projets résumés</h2>
+  <div class="w3-content" style="max-width:980px">
+    <p>Démonstration du fonctionnement de certaines parties de mes projets WEB.</p>
+    <h3>Sonic Snake</h3>
+    <p>Texte</p>
+    <h3>Gestions Propulse</h3>
+    <p>Texte</p>
+    <h3>Serveur WEB</h3>
+    <p>Texte</p>
+    <h3>VocaloDoga</h3>
+    <p>Texte</p>
+  </div>
+</div>
+
+</div>
+
+<script>
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>

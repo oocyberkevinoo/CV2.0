@@ -14,12 +14,17 @@ function toggleMenu(element){
 function showMenu(element){
 	lang = getCookie("lang");
 	val = getCookie("menu-"+lang+element);
-
 	
 	if(val == "true"){
 		if(lang == "FR"){
 			
 			switch(element){
+				case "portfolio":
+				document.getElementById("menu-"+lang+element).innerHTML= "<div class='w3-animate-left w3-theme-d4'><!-- <a href='./?page=software/index'>X- Présentation Globale</a> -->"+
+				"<a href='./?page=knowledge/Unity'>- UNITY</a>"+
+				"<a href='./?page=knowledge/web'>- WEB</a>"+
+				"<a href='./?page=knowledge/.net'>- .NET</a>";
+				break;
 				case "softwares":
 				document.getElementById("menu-"+lang+element).innerHTML= "<div class='w3-animate-left w3-theme-d4'><!-- <a href='./?page=software/index'>X- Présentation Globale</a> -->"+
 				"<a href='./?page=software/megamixeditor'>- Editeur de musiques (Project Diva)</a>"+
@@ -40,7 +45,8 @@ function showMenu(element){
 				"<a href='./?page=VR/CircuitVR'>- Circuit VR<br>(Coop à un casque)</a></div>";
 				break;
 				case "hardware":
-				document.getElementById("menu-"+lang+element).innerHTML= "<div class='w3-animate-left w3-theme-d4'><a href='./?page=hardware/projectdiva_controller'>- Controlleur Arcade ARDUINO</a></div>";
+				document.getElementById("menu-"+lang+element).innerHTML= "<div class='w3-animate-left w3-theme-d4'>"+
+				"<a href='./?page=hardware/projectdiva_controller'>- Controlleur Arcade ARDUINO</a></div>";
 				break;
 			}
 		}
