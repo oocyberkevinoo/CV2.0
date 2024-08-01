@@ -23,7 +23,7 @@ function showMenu(element){
 				document.getElementById("menu-"+lang+element).innerHTML= "<div class='w3-animate-left w3-theme-d4'><!-- <a href='./?page=software/index'>X- Présentation Globale</a> -->"+
 				"<a href='./?page=knowledge/Unity'>- UNITY</a>"+
 				"<a href='./?page=knowledge/web'>- WEB</a>"+
-				"<a href='./?page=knowledge/.net'>- .NET</a>";
+				"<a href='./?page=knowledge/dotNet'>- .NET</a>";
 				break;
 				case "softwares":
 				document.getElementById("menu-"+lang+element).innerHTML= "<div class='w3-animate-left w3-theme-d4'><!-- <a href='./?page=software/index'>X- Présentation Globale</a> -->"+
