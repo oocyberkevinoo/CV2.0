@@ -1,0 +1,60 @@
+<div class="w3-container w3-third" style="display: block">
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l2">Framework .NET</h2>
+<p>Texte sur mon niveau d'usage du framework .NET</p><br />
+</div>
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+<h2 class="w3-theme-l2">Les projets sous .NET</h2>
+<p>Liste des projets sous .NET, avec liens vers leur pages respectifs.<br>
+<li><a href="./?page=software/SonicRandomizer">Sonic Randomizer</a></li>
+<li><a href="./?page=software/GrooveCoasterConverter">Convertisseur Groove Coaster</a></li>
+<li><a href="./?page=hardware/projectdiva_controller">Logiciel de gestion du Controlleur Arcade</a></li>
+</p></div>
+</div>
+
+<div class="w3-container w3-twothird">
+  
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+  <h2 class="w3-theme-l2">C#</h2>
+  <div class="w3-content" style="max-width:980px">
+    <p>De quoi montrer mon aisance avec le langage C#<br>
+    Montrer des éxemples complèxes, des traveaux uniques, de la manipulation de données avancée.</p>
+  </div>
+</div>
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+  <h2 class="w3-theme-l2">Programmation orientée objet</h2>
+  <div class="w3-content" style="max-width:980px">
+    <p>Informations sur ma manière de programmer en POO.<br>
+    L'élabrotation de classes, l'utilisation dans un projet, les cas les plus pertinants.</p>
+  </div>
+</div>
+<div class="w3-theme-l1 w3-card-2" style="text-align: center">
+  <h2 class="w3-theme-l2">Communauté</h2>
+  <div class="w3-content" style="max-width:980px">
+    <p>Démonstration de l'interet communautaire des projets que je présente.</p>
+  </div>
+</div>
+
+</div>
+
+<script>
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>

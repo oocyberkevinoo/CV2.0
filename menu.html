@@ -1,10 +1,10 @@
 <script src="scripts/menus.js"></script>
-<script>showMenu('games');showMenu('softwares');showMenu('vrar');showMenu('hardware');showLang()</script>
+<script>showMenu('portfolio');showMenu('games');showMenu('softwares');showMenu('vrar');showMenu('hardware');showLang()</script>
 <nav class="w3-sidenav w3-collapse w3-theme-d1 w3-card-2 w3-animate-left" style="width:200px">
 	<div id="menuFR">
 		<h4 class="w3-theme-d2">MENU</h4>
 		<a href="#" onclick="w3_close()" class="w3-closenav w3-hide-large" style="font-size: 150%; text-align: center; padding-bottom: 10%">Fermer &times;</a>
-		<a href="./">Accueil</a>
+		<a href="./" style="padding: 0.7em;">Accueil</a>
 		<a href="./?page=profile">CV / Profil</a>
 		<a href="./?page=about">Contacts / à propos...</a>
 		<div class="socialLinks">
@@ -15,7 +15,9 @@
 			<a href="https://github.com/oocyberkevinoo/"><img src="images/icons/Git/GitHub-Mark-Light-64px.png"></img></a>
 		</div>
 		
-		<h5 class="w3-theme-d2">Portfolio</h5>
+		<h5 class="w3-theme-d2">Mes Travaux</h5>
+		<div class="clickable"><a onClick="toggleMenu('portfolio')" style="padding: 0.7em;" >PORTFOLIO</a></div>
+		<div id="menu-FRportfolio"></div>
 		<div class="clickable"><a onClick="toggleMenu('softwares')" >Logiciels</a></div>
 		<div id="menu-FRsoftwares"></div>
 		<div class="clickable"><a onClick="toggleMenu('games')" >Jeux</a></div>
@@ -41,7 +43,7 @@
 	<div id="menuEN">
 		<h4 class="w3-theme-d2">MENU</h4>
 		<a href="#" onclick="w3_close()" class="w3-closenav w3-hide-large" style="font-size: 150%; text-align: center; padding-bottom: 10%">Close &times;</a>
-		<a href="./">Home</a>
+		<a href="./" style="padding: 0.7em;">Home</a>
 		<a href="./?page=profile">CV / Profile</a>
 		<a href="./?page=about">Contacts / About...</a>
 		<div class="socialLinks">
@@ -52,7 +54,9 @@
 			<a href="https://github.com/oocyberkevinoo/"><img src="images/icons/Git/GitHub-Mark-Light-64px.png"></img></a>
 		</div>
 		
-		<h5 class="w3-theme-d2">Portfolio</h5>
+		<h5 class="w3-theme-d2">My Works</h5>
+		<div class="clickable"><a onClick="toggleMenu('portfolio')" style="padding: 0.7em;" >PORTFOLIO</a></div>
+		<div id="menu-ENportfolio"></div>
 		<a onClick="toggleMenu('softwares')" href="#">Softwares</a>
 		<div id="menu-ENsoftwares"></div>
 		<a onClick="toggleMenu('games')" href="#">Games</a>
