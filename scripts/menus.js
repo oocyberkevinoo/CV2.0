@@ -13,7 +13,11 @@ function toggleMenu(element){
 
 function showMenu(element){
 	lang = getCookie("lang");
+	portfolio = getCookie("menu-"+lang+"portfolio");
+	if(!portfolio || portfolio == "")	setCookie("menu-"+lang+"portfolio", true, 366);
 	val = getCookie("menu-"+lang+element);
+	
+				
 	
 	if(val == "true"){
 		if(lang == "FR"){
@@ -87,6 +91,12 @@ function showMenu(element){
 function createLang(){
 	lang = getCookie("lang");
 	if(lang != "FR" && lang != "EN")	setCookie("lang", "FR", 366);
+}
+
+function createPortfolioMenu(){
+	lang = getCookie("lang");
+	portfolio = getCookie("menu-"+lang+"portfolio");
+	if(!portfolio || portfolio == "")	setCookie("menu-"+lang+"portfolio", true, 366);
 }
 
 function updateLang(lang){
