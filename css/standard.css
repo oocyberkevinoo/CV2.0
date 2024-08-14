@@ -63,6 +63,12 @@ div#background {
 	position: relative;
 	min-height: 100vh;
 }
+.w3-opacity:hover{
+  opacity: 1;
+}
+.w3-opacity{
+  transition: opacity, 0.25s;
+}
 .socialLinks{
 	display: flex;
 }
