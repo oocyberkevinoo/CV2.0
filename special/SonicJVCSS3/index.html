@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://localhost:8080/LAB_PHP/?page=Game%20Engine -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>Mon Labo</title>
+        <link rel="stylesheet" media="screen" type="text/css" title="defaut" href="./Mon Labo_files/player.css">
+    </head>
+    <body><div id="score">Rings: 0<br>Time : 0</div>
+<div id="spikes"></div>
+<div id="ring" style="margin-left: 432px; margin-top: 440px;"><img src="./Mon Labo_files/ring.png" id="img_ring"></div>
+<div id="player" style="margin-left: 0px; margin-top: 0px;"><img src="./Mon Labo_files/player.png" id="img_player" width="80px" style="transform: scaleX(1);"></div>
+<script>
+    // Player intialisation
+    var x = 0;
+    var y = 0;
+    var direction = 0;
+    var rings = 0;
+    var timer = Date.now();
+    var invincible = 0;
+    // Stage Initialisation
+    var xSize = 19;
+    var ySize = 9;
+    var ringX = 5;
+    var ringY = 5;
+    var spikesX = [-1];
+    var spikesY = [-1];
+    var spikes = [spikesX, spikesY];
+    var spikeX;
+    var spikeY;
+    // Game Start
+    ring_respawn();
+    timerSec();
+    move();
+    graphics();
+    
+    //**************************************************************************
+	
+	/*
+	* GAME ENGINE -------------------------------------------------------------------------
+	*/
+    
+    window.onkeydown = function(e){ // Actualisation du jeu à chaque pression
+        //invincible = 0;
+        var timestamp = Date.now();
+        var key = e.keycode ? e.keycode : e.which;
+		
+
+        // Controls
+        //**********************************************************************
+        if(key == 39)this.player_direction(1); // Droite
+        if(key == 37)this.player_direction(3); // Gauche
+        if(key == 38)this.player_direction(4);
+        if(key == 40)this.player_direction(2);
+        //**********************************************************************
+
+    }
+	
+	
+    function timerSec(){ // Timer
+        document.getElementById("score").innerHTML = "Rings: "+rings+"<br>Time : "+Math.floor(((Date.now())-timer)/1000);
+        setTimeout(timerSec, 1000);
+    }
+	
+	/*
+	* PLAYER -------------------------------------------------------------------------
+	*/
+	function player_direction(x){ // Changement de la diréction du joueur
+        direction = x;
+        if(direction==1)document.getElementById("img_player").style.transform = "scaleX(1)";
+        if(direction==3)document.getElementById("img_player").style.transform = "scaleX(-1)";
+    }
+    function move(){ // Move Player
+        if(direction==1)x++;
+        if(direction==2)y++;
+        if(direction==3)x--;
+        if(direction==4)y--;
+        invincible = 0;
+        // Out Of Bounds Protection
+        
+        if(x<0)x=0; 
+        if(y<0)y=0; 
+        if(x>xSize)x=xSize; 
+        if(y>ySize)y=ySize; 
+
+        // Event Collision
+            setTimeout(this.collision, 150);
+        //console.log("X= "+x+" Y= "+y);
+        setTimeout(move, 150);
+    }
+    function graphics(){
+        // Graphics Actualisation
+        document.getElementById("player").style.marginLeft = (80*x)+"px";
+        document.getElementById("player").style.marginTop = (80*y)+"px";
+        ring_respawn();
+        setTimeout(graphics, 30);
+    }
+    function collision(){
+		if(x==ringX && y==ringY){ // collision avec un anneau
+			ringX = Math.floor(Math.random()*xSize);
+			ringY = Math.floor(Math.random()*ySize);
+			ring_outofbounds();
+			if(spikesX.indexOf(ringX)!=-1 && spikesY.indexOf(ringY)!=-1){
+				for(var idx = 1; idx <= rings; idx++){
+					while(window["Spike"+idx].posX === ringX && window["Spike"+idx].posY === ringY){
+						ringX = Math.floor(Math.random()*xSize);
+						ringY = Math.floor(Math.random()*ySize);
+						ring_outofbounds();
+					}
+				}
+			}
+			
+			ring_respawn();
+			rings++;
+			document.getElementById("score").innerHTML = "Rings: "+rings+"<br>Time : "+Math.floor(((Date.now())-timer)/1000);
+			invincible = 1;
+			create_spikes(x, y);
+        
+        }
+		
+
+        if((spikesX.indexOf(x)!=-1 && spikesY.indexOf(y)!=-1) && invincible!=1){ // Collision possible avec une pique
+            for(var idx = 1; idx <= rings; idx++){   
+                if(window["Spike"+idx].posX === x && window["Spike"+idx].posY === y){ // Collision avec une pique
+                    
+                    console.log("DEAD: x="+x+" spikex="+window["Spike"+idx].posX);
+                    idx = -1;
+                    alert("DEAD");
+                    location.reload(); // MORT
+                }
+            }
+            
+        }
+		
+        
+    }
+    
+	/*
+	* RINGS -------------------------------------------------------------------------
+	*/
+    function ring_outofbounds(){
+        if(ringX == 0)ringX = 1;
+        if(ringX == xSize)ringX = xSize-1;
+        if(ringY == 0)ringY = 1;
+        if(ringY == ySize)ringY = ySize-1;
+    }
+    function ring_respawn(){ // Génération d'un anneau sur le niveau
+        document.getElementById("ring").style.marginLeft = ((80*ringX)+32)+"px";
+        document.getElementById("ring").style.marginTop = ((80*ringY)+40)+"px";
+    }
+    
+    function create_spikes(x, y){ // Génération d'une pique sur le niveau à la palce de l'anneau
+        window["Spike"+rings] = new Spike(x, y);
+        spikesX.push(x);
+        spikesY.push(y);
+        console.log(spikesX+" and "+spikesY);
+    }
+    
+	/*
+	* SPIKES -------------------------------------------------------------------------
+	*/
+
+    class Spike{ // Objet: Les piques
+        
+        constructor(x, y){ // Création d'une pique
+            console.log("SPIKE");
+            this.posX = x;
+            this.posY = y;
+            this.id = rings;
+            document.getElementById("spikes").innerHTML = document.getElementById("spikes").innerHTML+"<div id=\"spike"+this.id+"\"><img src=\"IMG/spikes.png\"></div>";
+            document.getElementById("spike"+this.id).style.marginLeft = ((80*this.posX)+32)+"px";
+            document.getElementById("spike"+this.id).style.marginTop = ((80*this.posY)+40)+"px";
+            console.log("SPIKE is "+this.posX+", "+this.posY);
+        }
+        
+        
+        
+    }
+
+</script>    
+
+</body></html>

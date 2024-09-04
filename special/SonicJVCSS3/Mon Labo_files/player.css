@@ -1,0 +1,31 @@
+#player
+{
+	
+	transition: all 0.3000s;
+	transition-timing: ease-in-out;
+	position: absolute;
+
+}
+*
+{
+    position: absolute;
+}
+#score
+{
+    text-align: right;
+    margin-left: 150px;
+    z-index: 1000;
+    color: yellow;
+    border: darkgray;
+    border-width: thick;
+    border-style: outset;
+    background-color: crimson;
+    text-transform: uppercase;
+    text-align: justify;
+    opacity: 0.9;
+}
+html{
+    background-image: url("../IMG/grid_2.png");
+    background-repeat: repeat;
+        background-color: dimgrey;
+}
