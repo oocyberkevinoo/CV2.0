@@ -48,6 +48,10 @@ div#background {
 	z-index: -5;
 }
 
+.w3-content{
+  padding-bottom: 1px;
+}
+
 .w3-sidenav a{
     border-color: black;
     border-width: thin;
